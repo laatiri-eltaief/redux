@@ -7,11 +7,10 @@ const TaskList = () => {
     const [txt, setTxt] = useState("")
     const search=useState("")
     return (
-        <div> 
+        <div className="search"> 
         <input type="text" onChange={(e) => setTxt(e.target.value)} value={txt} />
         <button onClick={search}>search</button>
         <div className="todo-list">
-            
             {
                 listOfTasks
                 .filter(el => el.task.toUpperCase().includes(txt.toUpperCase()))
